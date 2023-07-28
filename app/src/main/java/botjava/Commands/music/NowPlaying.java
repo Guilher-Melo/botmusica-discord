@@ -1,5 +1,6 @@
 package botjava.Commands.music;
 
+import java.awt.Color;
 import java.util.List;
 
 import com.sedmelluq.discord.lavaplayer.track.AudioTrackInfo;
@@ -63,9 +64,10 @@ public class NowPlaying implements ICommands {
     AudioTrackInfo info = guildMusicManager.getTrackScheduler().getPlayer().getPlayingTrack().getInfo();
     EmbedBuilder embedBuilder = new EmbedBuilder();
     embedBuilder.setTitle("Currently Playing");
+    embedBuilder.setColor(Color.BLUE);
     embedBuilder.setDescription("**Name:** `" + info.title + "`");
-    embedBuilder.appendDescription("\n**Author:** `" + info.author + "`");
-    embedBuilder.appendDescription("\n**URL:** `" + info.uri + "`");
+    embedBuilder.appendDescription("\n\n**Author:** `" + info.author + "`");
+    embedBuilder.appendDescription("\n\n**URL:** `" + info.uri + "`");
     event.replyEmbeds(embedBuilder.build()).queue();
   }
   

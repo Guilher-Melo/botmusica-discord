@@ -47,7 +47,7 @@ public class Stop implements ICommands {
     }
 
     if(selfVoiceState.getChannel() != memberVoiceState.getChannel()) {
-      event.reply("Você não está no mesmo server que eu!").queue();
+      event.reply("Você não está no mesmo canal de voz que eu!").queue();
       return;
     }
 

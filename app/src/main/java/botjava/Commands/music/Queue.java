@@ -1,5 +1,6 @@
 package botjava.Commands.music;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,7 +52,7 @@ public class Queue implements ICommands{
     }
 
     if(selfVoiceState.getChannel() != memberVoiceState.getChannel()) {
-      event.reply("Você não está no mesmo server que eu!").queue();
+      event.reply("Você não está no mesmo canal de voz que eu!").queue();
       return;
     }
 
@@ -60,6 +61,7 @@ public class Queue implements ICommands{
 
     EmbedBuilder embedBuilder = new EmbedBuilder();
     embedBuilder.setTitle("Current Queue");
+    embedBuilder.setColor(Color.blue);
 
     if(queue.isEmpty()) {
       embedBuilder.setDescription("Queue is empty!");
@@ -67,7 +69,7 @@ public class Queue implements ICommands{
 
     for(int i = 0; i< queue.size(); i++) {
       AudioTrackInfo info = queue.get(i).getInfo();
-      embedBuilder.addField(i + 1 + ":", info.title, false);
+      embedBuilder.addField(i + 1 + ".", info.title, false);
     }
 
     event.replyEmbeds(embedBuilder.build()).queue();
