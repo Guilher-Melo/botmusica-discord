@@ -49,14 +49,14 @@ public class NowPlaying implements ICommands {
     }
 
     if(selfVoiceState.getChannel() != memberVoiceState.getChannel()) {
-      event.reply("Você não está no mesmo server que eu!").queue();
+      event.reply("Você não está no mesmo canal de voz que eu!").queue();
       return;
     }
 
     GuildMusicManager guildMusicManager = PlayerManager.get().getGuildMusicManager(event.getGuild());
 
-    if(guildMusicManager.getTrackScheduler().getPlayer().getPlayingTrack().getInfo() == null) {
-      event.reply("Eu não estou tocando nada no momento");
+    if(guildMusicManager.getTrackScheduler().getPlayer().getPlayingTrack() == null) {
+      event.reply("Eu não estou tocando nada no momento").queue();
       return;
     }
 
