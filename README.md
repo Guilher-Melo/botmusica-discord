@@ -31,18 +31,20 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 👨‍💻 Como executar o projeto
 
-É necessário ter 
-  ### `Java 17 ou superior`
-  ### `Gradle`
-instalados na máquina
+É necessário ter <br/>
+   - Java 17 ou superior<br/>
+   - Gradle
 
 Construa o projeto usando o Gradle
+```java
 
 ### `./gradlew shadowJar`
-
+```
 Execute o JAR gerado
 
+```java
 ### `java -jar build/libs/botdependecies.jar`
+```
 
 ## :memo: Licença
 
