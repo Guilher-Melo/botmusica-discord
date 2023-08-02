@@ -38,12 +38,12 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 Construa o projeto usando o Gradle
 ```java
 
-### `./gradlew shadowJar`
+./gradlew shadowJar
 ```
 Execute o JAR gerado
 
 ```java
-### `java -jar build/libs/botdependecies.jar`
+java -jar build/libs/botdependecies.jar
 ```
 
 ## :memo: Licença
